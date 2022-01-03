@@ -1,0 +1,214 @@
+Working with Blocks
+Example 3
+
+  Line
+    1
+  Action
+    #map method call
+  Object
+    outer array
+  Side Effect
+    none
+  Return Value
+    new array
+  Return Value Used?
+    No
+
+  Line
+    1-3
+  Action
+    Block execution
+  Object
+    Each sub-array
+  Side Effect
+    none
+  Return Value
+    nil
+  Return Value Used?
+    Yes, by maps for transformation
+
+  Line
+    2
+  Action
+    #first method call
+  Object
+    each sub-array
+  Side Effect
+    none
+  Return Value
+    Element at index 0 of each sub-array
+  Return Value Used?
+    Yes, by puts
+
+  Line
+    2
+  Action
+    #puts method call
+  Object
+    Element at index 0 of each sub-array
+  Side Effect
+    outputs a string representation of int
+  Return Value
+    nil
+  Return Value Used?
+    no
+
+  Line
+    3
+  Action
+    #first method call
+  Object
+    each sub array
+  Side Effect
+    none
+  Return Value
+    element at index 0 of sub-array
+  Return Value Used?
+    Yes, used to determine return value of block
+
+Example 4
+
+  Line
+    1
+  Action
+    #output of object#method assigned to variable my_arr
+  Object
+    multi-dimensional array
+  Side Effect
+    none
+  Return Value
+    original multi-dimensional array
+  Return Value Used?
+    no
+
+  Line
+    1
+  Action
+    #each method called on multi-dimensional array
+  Object
+    multi-dimensional array
+  Side Effect
+    none
+  Return Value
+    Original multi-dimensional array
+  Return Value Used?
+    yes, by variable assignment
+
+  Line
+    1-7
+  Action
+    Block Execution
+  Object
+    each sub-array
+  Side Effect
+    none
+  Return Value
+    each sub-array
+  Return Value Used?
+    no
+
+  Line
+    2-6
+  Action
+    Another block execution
+  Object
+    Each element of sub-array
+  Side Effect
+    none
+  Return Value
+    Sub-array
+  Return Value Used?
+    no
+
+  Line
+    3
+  Action
+    IF statement, comparison operator used
+  Object
+    element of sub-array
+  Side Effect
+    allows the element to continue or not
+  Return Value
+    true or false
+  Return Value Used?
+    yes
+
+  Line
+    4
+  Action
+    #puts method used on element
+  Object
+    element of sub-array
+  Side Effect
+    string is outputted
+  Return Value
+    nil
+  Return Value Used?
+    no
+
+Example 5
+
+  Line
+    1
+  Action
+    #map method called on multi-dimensional array
+  Object
+    multi-dimensional array
+  Side Effect
+    none
+  Return Value
+    new (transformed) array
+  Return Value Used?
+    no
+
+  Line
+    1-5
+  Action
+    Block Execution
+  Object
+    each sub-array
+  Side Effect
+    none
+  Return Value
+    (new, transformed) sub-array
+  Return Value Used?
+    yes, transformation into a new array
+
+  Line
+    2
+  Action
+    #map method called on sub-array
+  Object
+    each sub-array
+  Side Effect
+    none
+  Return Value
+    new sub-array
+  Return Value Used?
+    yes, transformation on sub-array of multi-dimensional Sub-array
+
+  Line
+    2-4
+  Action
+    Block Execution
+  Object
+    element of sub-array
+  Side Effect
+    none
+  Return Value
+    value of element changed * 2 (an integer)
+  Return Value Used?
+    Yes, by outer block
+
+  Line
+    3
+  Action
+    multiplication 
+  Object
+    element of sub-array
+  Side Effect
+    none
+  Return Value
+    element is doubled
+  Return Value Used?
+    yes
